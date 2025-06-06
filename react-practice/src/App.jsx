@@ -1,23 +1,14 @@
 import Accordion from "./components/accordian";
-// import RandomColor from "./components/random-color";
-import { useEffect, useState, useRef, Suspense } from "react";
+import RandomColor from "./components/random-color";
+import { useEffect, useState, useRef, Suspense, useMemo } from "react";
+import StarRating from "./components/star-rating";
 
 function App() {
-  const input = useRef();
-
-  const btnClicked = () => {
-    console.log(input.current);
-    input.current.focus();
-  };
   return (
     <div className="App">
-      {/* Accordion */}
-      {/* <Accordion /> */}
-
-      {/* Random Color Generator */}
-      {/* <RandomColor /> */}
-      <input type="text" ref={input} />
-      <button onClick={btnClicked}>Click Me</button>
+      {/* <Accordion />
+      <RandomColor /> */}
+      <StarRating num={10} />
     </div>
   );
 }
